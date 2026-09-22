@@ -1,0 +1,373 @@
+:root {
+  --bg: #fff6f0;
+  --paper: #fffbf7;
+  --ink: #3b2438;
+  --ink-soft: #6b5468;
+  --rose: #e8628c;
+  --butter: #ffc857;
+  --sage: #4f7d58;
+  --blue: #7c9ce8;
+  --border: rgba(59, 36, 56, 0.14);
+
+  --font-display: "Mali", "Chonburi", cursive;
+  --font-body: "Sarabun", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+
+.section-lead {
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+  margin: 0 0 28px;
+  line-height: 1.6;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  position: relative;
+  padding: 72px 0 56px;
+  text-align: center;
+}
+
+.hero-balloons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.balloon {
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-16px) rotate(2deg); }
+}
+
+.hero-eyebrow {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  margin: 0 0 4px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3rem, 12vw, 4.6rem);
+  line-height: 1;
+  margin: 0;
+  color: var(--rose);
+  position: relative;
+  display: inline-block;
+}
+
+.hero-age {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--paper);
+  background: var(--sage);
+  border-radius: 999px;
+  padding: 4px 14px;
+  vertical-align: middle;
+  margin-left: 12px;
+  transform: rotate(-6deg) translateY(-14px);
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin: 18px 0 32px;
+}
+
+.hero-scroll {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 2px solid var(--butter);
+  padding-bottom: 2px;
+}
+
+/* ---------- Countdown ---------- */
+
+.countdown-section {
+  text-align: center;
+  padding: 8px 0 40px;
+}
+
+.countdown-label {
+  margin: 0 0 4px;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+
+.countdown-lead {
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.countdown-today {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--rose);
+  margin: 8px 0 0;
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.countdown-box {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 6px;
+  min-width: 62px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--rose);
+  line-height: 1;
+}
+
+.countdown-unit {
+  font-size: 0.72rem;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
+/* ---------- Cake ---------- */
+
+.cake-section {
+  text-align: center;
+  padding: 40px 0 56px;
+  border-top: 1px dashed var(--border);
+}
+
+.cake-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: transform 0.15s ease;
+}
+
+.cake-button:active {
+  transform: scale(0.96);
+}
+
+.cake-button:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 6px;
+}
+
+.flame {
+  transform-origin: 3px 18px;
+  animation: flicker 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes flicker {
+  from { transform: scale(1) rotate(-3deg); }
+  to { transform: scale(1.12) rotate(3deg); }
+}
+
+.cake-caption {
+  margin-top: 14px;
+  font-size: 1.02rem;
+  color: var(--ink-soft);
+  min-height: 1.4em;
+}
+
+/* ---------- Wishes ---------- */
+
+.wishes-section {
+  padding: 40px 0 56px;
+  border-top: 1px dashed var(--border);
+}
+
+.wishes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.wish-card {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px 22px;
+  text-align: left;
+}
+
+.wish-icon {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.wish-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin: 0 0 6px;
+  color: var(--rose);
+}
+
+.wish-text {
+  margin: 0;
+  line-height: 1.7;
+  color: var(--ink);
+  font-size: 0.98rem;
+}
+
+/* ---------- Gallery ---------- */
+
+.gallery-section {
+  padding: 40px 0 56px;
+  border-top: 1px dashed var(--border);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.gallery-placeholder,
+.gallery-photo {
+  aspect-ratio: 1 / 1;
+  border-radius: 14px;
+}
+
+.gallery-placeholder {
+  border: 1.5px dashed var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  padding: 12px;
+  background: var(--paper);
+}
+
+.gallery-photo {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  text-align: center;
+  padding: 40px 0 8px;
+  border-top: 1px dashed var(--border);
+}
+
+.footer-divider {
+  color: var(--rose);
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+
+.footer-text {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+.footer-signature {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+/* ---------- Confetti ---------- */
+
+.confetti-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  border-radius: 2px;
+  animation-name: fall;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--drift), 110vh) rotate(var(--rot));
+    opacity: 0.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .balloon,
+  .flame,
+  .confetti-piece {
+    animation: none !important;
+  }
+}
+
+@media (min-width: 520px) {
+  .wishes-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
