@@ -6,6 +6,7 @@ import WishCards from "./components/WishCards.jsx";
 import Gallery from "./components/Gallery.jsx";
 import Footer from "./components/Footer.jsx";
 import Confetti from "./components/Confetti.jsx";
+import { FaInstagram } from "react-icons/fa";
 
 export default function App() {
   const [showConfetti, setShowConfetti] = useState(false);
@@ -24,6 +25,16 @@ export default function App() {
       <WishCards />
       <Gallery />
       <Footer />
+
+      {/* signatures */}
+      <div className="signature">
+        <span className="sig-ig">
+          <FaInstagram className="ig-logo" />
+          <span className="rainbow-text">IG: wiruya_k</span>
+        </span>
+        <span className="sig-quote">Dear Nene at 25 Year old ( ｡ •̀ ᴖ •́ ｡)</span>
+      </div>
+
     </div>
   );
 }

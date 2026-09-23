@@ -2,10 +2,10 @@
 // แล้วแก้ path ใน array PHOTOS ด้านล่างให้ตรงกับชื่อไฟล์จริง
 // เช่น { src: "/photos/photo1.jpg", caption: "ทริปทะเล" }
 const PHOTOS = [
-  { src: "/images/drawing.PNG", caption: "ไปอเมซอนหลังเที่ยวเกาะสีชัง" },
-  { src: "/images/IMG_4052.jpg", caption: "วาดรูป" },
   { src: "/images/IMG_5088.jpg", caption: "สีชัง" },
   { src: "/images/IMG_5112.jpg", caption: "สีชัง" },
+  { src: "/images/drawing.PNG", caption: "ไปอเมซอนหลังเที่ยวเกาะสีชัง" },
+  { src: "/images/IMG_4052.jpg", caption: "วาดรูป" },
   { src: "/images/IMG_5362.jpg", caption: "สงกรานต์" },
   { src: "/images/IMG_5480.jpg", caption: "วัด" },
   { src: "/images/IMG_5485.jpg", caption: "เที่ยว" },

@@ -18,6 +18,22 @@ function Balloon({ color, style, string = true }) {
   );
 }
 
+function Flower({ color = "#E8628C", style }) {
+  return (
+    <div className="balloon" style={style}>
+      <svg viewBox="0 0 60 60" width="40" height="40">
+        <g fill={color}>
+          <circle cx="30" cy="14" r="10" />
+          <circle cx="46" cy="30" r="10" />
+          <circle cx="30" cy="46" r="10" />
+          <circle cx="14" cy="30" r="10" />
+        </g>
+        <circle cx="30" cy="30" r="9" fill="#FFC857" />
+      </svg>
+    </div>
+  );
+}
+
 export default function Hero() {
   return (
     <section className="hero">
@@ -26,6 +42,10 @@ export default function Hero() {
         <Balloon color="#FFC857" style={{ left: "78%", top: "8%", animationDelay: "0.6s" }} />
         <Balloon color="#7C9CE8" style={{ left: "85%", top: "48%", animationDelay: "1.1s" }} />
         <Balloon color="#6F9C77" style={{ left: "2%", top: "55%", animationDelay: "0.3s" }} />
+
+        <Flower color="#E8628C" style={{ left: "18%", top: "75%", animationDelay: "0.4s" }} />
+        <Flower color="#FFC857" style={{ left: "62%", top: "72%", animationDelay: "0.9s" }} />
+        <Flower color="#7C9CE8" style={{ left: "40%", top: "10%", animationDelay: "1.3s" }} />
       </div>
 
       <p className="hero-eyebrow">แด่คนที่ชื่อ</p>
